@@ -1,0 +1,8 @@
+{
+  "invoice_id": "INV-2026-0001",
+  "recipient": "11111111111111111111111111111111",
+  "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+  "amount_usdc": "12.50",
+  "reference": "SysvarC1ock11111111111111111111111111111111",
+  "note": "Table 4"
+}

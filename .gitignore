@@ -1,0 +1,16 @@
+# Portable runtime and downloaded publisher artifacts
+runtime/
+vendor/*.zip
+vendor/SHA256SUMS-*
+
+# Project-local ZeroClaw state, traces, and installed skill copies
+zeroclaw-state/
+
+# A real operator policy is intentionally never versioned
+config/policy.json
+
+# Python caches and local demonstrations
+__pycache__/
+*.py[cod]
+.pytest_cache/
+evidence/local-*

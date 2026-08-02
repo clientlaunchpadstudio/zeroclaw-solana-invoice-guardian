@@ -1,0 +1,41 @@
+# Copy this file to an operator-local ZeroClaw config directory and adapt only
+# filesystem paths. Do not commit an auth profile, API key, seed phrase, private
+# key, customer address, payment reference, or wallet connection.
+schema_version = 3
+
+[providers.models.openai.coding]
+# Confirm a currently supported Codex model for the operator's account before use.
+model = "gpt-5.4"
+wire_api = "responses"
+requires_openai_auth = true
+
+[agents.invoice_guardian]
+enabled = true
+model_provider = "openai.coding"
+risk_profile = "local_demo"
+skill_bundles = ["invoice_guardian"]
+acp_enable_mcp = false
+
+[agents.invoice_guardian.workspace]
+unrestricted_filesystem = false
+
+[skill_bundles.invoice_guardian]
+directory = "shared/skills/invoice_guardian"
+
+[risk_profiles.local_demo]
+# A shell action requires an operator approval. The reference poller must never
+# bypass this gate to reach another host or make a payment-related action.
+always_ask = ["shell"]
+block_high_risk_commands = true
+
+[sop]
+default_execution_mode = "deterministic"
+persist_runs = true
+sops_dir = "shared/sops"
+step_scope_enforce = true
+untrusted_input_guard = "block"
+
+[gateway]
+host = "127.0.0.1"
+require_pairing = true
+allow_public_bind = false

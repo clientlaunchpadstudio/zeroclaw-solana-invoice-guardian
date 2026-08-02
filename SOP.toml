@@ -1,0 +1,12 @@
+[sop]
+name = "solana-reference-poll"
+version = "0.1.0"
+description = "Fail-closed observation of an operator-approved Solana invoice reference through the fixed public read-only RPC path."
+deterministic = true
+
+[[triggers]]
+type = "manual"
+
+[[triggers]]
+type = "cron"
+expression = "0 */6 * * *"

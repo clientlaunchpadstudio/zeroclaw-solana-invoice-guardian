@@ -1,0 +1,9 @@
+{
+  "recipient_allowlist": [
+    "11111111111111111111111111111111"
+  ],
+  "accepted_mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+  "max_amount_usdc": "50.00",
+  "label": "Invoice Guardian demo",
+  "message_prefix": "Invoice"
+}
