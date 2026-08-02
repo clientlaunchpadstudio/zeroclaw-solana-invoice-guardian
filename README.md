@@ -1,8 +1,8 @@
 # ZeroClaw Solana Invoice Guardian
 
-An entry for the Superteam Brasil ZeroClaw/Solana bounty. The project demonstrates a Tier-1, non-custodial agent that turns a human-approved invoice request into an unsigned Solana Pay URL and safely polls a public reference address for a payment observation.
+An entry for the Superteam Brasil ZeroClaw/Solana bounty. The project demonstrates a Tier-1 invoice workflow that turns approved invoice data into an unsigned Solana Pay request and safely polls a public reference address for a payment observation.
 
-The entry deliberately never stores a seed phrase, private key, or wallet connection. It does not create, sign, broadcast, or fund a transaction. A human wallet signs any payment outside the agent.
+The workflow is intentionally constrained to preparation and read-only observation. It creates no transactions and does not broadcast or fund payments; payment execution remains outside this workflow.
 
 ## Evidence target
 
